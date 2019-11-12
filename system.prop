@@ -1,0 +1,41 @@
+#
+# from device/samsung/erd9610//system.prop
+#
+#
+# system.prop for erd9610
+#
+
+ro.arch=exynos9610
+#ro.kernel.qemu=1
+#ro.kernel.qemu.gles=2
+persist.demo.hdmirotationlock=false
+
+# Enable navigation keys in prop as we disabled framework-res RRO
+# in vendor/overlay
+qemu.hw.mainkeys=0
+
+#Enabled bootanimation sound play
+persist.sys.bootanim.play_sound=true
+
+## IMS Packet Inital Start flag
+init.svc.vendor.pktrouter=1
+
+#Enable CSC for vendor image
+ro.vendor.cscsupported=1
+
+ril.ecclist=911,112
+ril.ecclist1=911,112
+
+# adoptable storage
+ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.allow_encrypt_override=true
+
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+# End-call tone extra allocted time
+persist.audio.endcall.delay=250
+
+# Expose CFA Config to specific apps
+ro.camera.cfa.packagelist=com.motorola.coresettingsext,com.motorola.camera2,com.motorola.actions
+
+#
